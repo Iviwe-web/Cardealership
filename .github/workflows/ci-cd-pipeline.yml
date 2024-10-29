@@ -61,5 +61,6 @@ jobs:
         run: |
           echo "Deploying to production server..."
           # Add your deployment commands here
-          # For example, you might use SSH to deploy to a server
+          # Example:
           # ssh user@server "cd /path/to/app && git pull && npm install && pm2 restart all"
+
