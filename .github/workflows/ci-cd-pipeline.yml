@@ -19,13 +19,13 @@ jobs:
       - name: Setup .Net
         uses: actions/setup-dotnet@v4
         with:
-              dontnet-version: 8.0.x  # Change this to your desired Node.js version
+              dontnet-version: 8.0.x
 
       - name: Restore dependencies
         run: dotnet restore
 
       - name: Build
-        run: dotnet build --no-restore --configuration Release # Assuming you have a build script in your package.json
+        run: dotnet build --no-restore --configuration Release
         
       - name: Run Tests
         run: dotnet test --no-build --verbosity normal --configuration Release
