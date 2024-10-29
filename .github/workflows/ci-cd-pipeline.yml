@@ -21,8 +21,13 @@ jobs:
         with:
               dontnet-version: 8.0.x
 
-      - name: Setup MSBuild.exe
-        uses: microsoft/setup-msbuild@v2
+     
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test 
+
 
       - name: Build
         run: dotnet build --no-restore --configuration Release
